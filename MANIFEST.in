@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include trainee_management *.css
+recursive-include trainee_management *.csv
+recursive-include trainee_management *.html
+recursive-include trainee_management *.ico
+recursive-include trainee_management *.js
+recursive-include trainee_management *.json
+recursive-include trainee_management *.md
+recursive-include trainee_management *.png
+recursive-include trainee_management *.py
+recursive-include trainee_management *.svg
+recursive-include trainee_management *.txt
+recursive-exclude trainee_management *.pyc
