@@ -1,0 +1,298 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:full_name",
+ "creation": "2024-02-26 13:25:46.369541",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "trainee_details_section",
+  "first_name",
+  "last_name",
+  "full_name",
+  "contact_no",
+  "address",
+  "column_break_f2sss",
+  "middle_name",
+  "email_id",
+  "date_of_birth",
+  "gender",
+  "category",
+  "educational_details_section",
+  "current_course",
+  "technical_skills",
+  "column_break_1rs6x",
+  "semester",
+  "enrollment__number",
+  "resume",
+  "trainee_college_details",
+  "college_name",
+  "placement_officers_name",
+  "placement_officer_email_id",
+  "column_break_durig",
+  "university_name",
+  "placement_officer_contact_no",
+  "recommendation_letter",
+  "amended_from",
+  "training_details_at_nddb_section",
+  "application_date",
+  "starting_date",
+  "duration",
+  "column_break_pdb1n",
+  "joining_date",
+  "ending_date",
+  "status"
+ ],
+ "fields": [
+  {
+   "fieldname": "trainee_details_section",
+   "fieldtype": "Tab Break",
+   "label": "Trainee Details"
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "First Name",
+   "options": "Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Last Name",
+   "options": "Name",
+   "reqd": 1
+  },
+  {
+   "default": "+91-",
+   "fieldname": "contact_no",
+   "fieldtype": "Phone",
+   "in_list_view": 1,
+   "label": "Contact No.",
+   "reqd": 1
+  },
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Email Id",
+   "options": "Email",
+   "reqd": 1
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Small Text",
+   "label": "Address",
+   "reqd": 1
+  },
+  {
+   "fieldname": "trainee_college_details",
+   "fieldtype": "Tab Break",
+   "label": "College Details"
+  },
+  {
+   "fieldname": "college_name",
+   "fieldtype": "Data",
+   "label": "College Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "university_name",
+   "fieldtype": "Data",
+   "label": "University Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "placement_officers_name",
+   "fieldtype": "Data",
+   "label": "Placement Officer's Name",
+   "options": "Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "placement_officer_email_id",
+   "fieldtype": "Data",
+   "label": "Placement Officer Email Id",
+   "options": "Email",
+   "reqd": 1
+  },
+  {
+   "default": "+91-",
+   "fieldname": "placement_officer_contact_no",
+   "fieldtype": "Phone",
+   "label": "Placement Officer Contact No.",
+   "reqd": 1
+  },
+  {
+   "fieldname": "semester",
+   "fieldtype": "Int",
+   "label": "Semester",
+   "reqd": 1
+  },
+  {
+   "fieldname": "recommendation_letter",
+   "fieldtype": "Attach",
+   "label": "Recommendation Letter",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Trainee",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_f2sss",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "resume",
+   "fieldtype": "Attach",
+   "label": "Resume",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_durig",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "training_details_at_nddb_section",
+   "fieldtype": "Tab Break",
+   "label": "Training Details "
+  },
+  {
+   "fieldname": "application_date",
+   "fieldtype": "Date",
+   "label": "Application Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "joining_date",
+   "fieldtype": "Date",
+   "label": "Joining Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "starting_date",
+   "fieldtype": "Date",
+   "label": "Starting Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ending_date",
+   "fieldtype": "Date",
+   "label": "Ending Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "technical_skills",
+   "fieldtype": "Data",
+   "label": "Technical Skills",
+   "reqd": 1
+  },
+  {
+   "fieldname": "educational_details_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_1rs6x",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_pdb1n",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nActive\nCompleted",
+   "reqd": 1
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Data",
+   "label": "Duration ",
+   "read_only": 1
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "Date Of Birth"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "label": "Category",
+   "options": "\nGeneral\nOBC\nSC\nST",
+   "reqd": 1
+  },
+  {
+   "fieldname": "current_course",
+   "fieldtype": "Select",
+   "label": "Current Course",
+   "options": "\nB.Tech\nB.E\nBCA\nB.Sc\nM.Tech\nM.E\nMCA\nM.Sc",
+   "reqd": 1
+  },
+  {
+   "fieldname": "middle_name",
+   "fieldtype": "Data",
+   "label": "Middle Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "enrollment__number",
+   "fieldtype": "Data",
+   "label": "Enrollment  Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "Gender",
+   "options": "\nMale\nFemale"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-03-01 10:57:32.969159",
+ "modified_by": "Administrator",
+ "module": "Trainee Management",
+ "name": "Trainee",
+ "name_case": "Title Case",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
