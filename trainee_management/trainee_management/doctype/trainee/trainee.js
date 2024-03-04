@@ -98,7 +98,7 @@ function Duration(frm){
 	   var todate = new Date(StartDate);
         var enddate = new Date(EndDate);
         
-        var days = enddate.getDate() - todate.getDate();
+        var days = todate.getDate() - enddate.getDate();
         var months = enddate.getMonth() - todate.getMonth();
         
         frm.set_value("duration", months + " Month "+", "+  days + " Days");
