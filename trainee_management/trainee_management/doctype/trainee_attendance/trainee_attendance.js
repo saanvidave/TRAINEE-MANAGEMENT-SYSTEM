@@ -2,12 +2,13 @@
 // For license information, please see license.txt
 
 frappe.ui.form.on('Trainee Attendance', {
-    refresh(frm) {
-		frm.set_value("attendance_date", frappe.datetime.get_today());
+    // refresh(frm) {
+	// 	frm.set_value("attendance_date", frappe.datetime.get_today());
 
-	},
+	// },
     
 	validate: function(frm) {
+
 		if (frm.doc.attendance_date > get_today()) {
 			frappe.msgprint(__("Select Valid Date "));
 			frappe.validated = false;
