@@ -1,0 +1,20 @@
+{
+ "cards": [],
+ "charts": [
+  {
+   "width": "Half"
+  }
+ ],
+ "creation": "2024-03-04 17:50:28.254860",
+ "dashboard_name": "Trainee Management",
+ "docstatus": 0,
+ "doctype": "Dashboard",
+ "idx": 0,
+ "is_default": 1,
+ "is_standard": 1,
+ "modified": "2024-03-04 17:50:28.254860",
+ "modified_by": "test1@nddb.coop",
+ "module": "Trainee Management",
+ "name": "Trainee Management",
+ "owner": "test1@nddb.coop"
+}

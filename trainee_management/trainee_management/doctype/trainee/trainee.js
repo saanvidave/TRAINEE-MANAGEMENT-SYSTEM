@@ -97,7 +97,7 @@ function Status(frm) {
 function Duration(frm){
 	   var todate = new Date(StartDate);
         var enddate = new Date(EndDate);
-        
+        //for duration
         var days = todate.getDate() - enddate.getDate();
         var months = enddate.getMonth() - todate.getMonth();
         

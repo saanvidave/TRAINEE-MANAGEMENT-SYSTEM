@@ -1,0 +1,48 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2024-03-05 12:47:05.197208",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "mandatory": 0,
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "mandatory": 0,
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "College Format",
+ "modified": "2024-03-05 15:05:43.038498",
+ "modified_by": "Administrator",
+ "module": "Trainee Management",
+ "name": "Trainee Attendance Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Trainee Attendance",
+ "report_name": "Trainee Attendance Report",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Supervisor"
+  },
+  {
+   "role": "Trainee"
+  }
+ ]
+}

@@ -1,0 +1,48 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2024-03-05 12:48:55.344841",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "mandatory": 0,
+   "wildcard_filter": 0
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date",
+   "mandatory": 0,
+   "wildcard_filter": 0
+  }
+ ],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "College Format",
+ "modified": "2024-03-05 15:06:47.028420",
+ "modified_by": "Administrator",
+ "module": "Trainee Management",
+ "name": "Trainee Work Status Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Trainee Daily Work Status",
+ "report_name": "Trainee Work Status Report",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Trainee"
+  },
+  {
+   "role": "Supervisor"
+  }
+ ]
+}

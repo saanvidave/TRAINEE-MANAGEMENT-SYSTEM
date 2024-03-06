@@ -25,6 +25,7 @@
    "reqd": 1
   },
   {
+   "default": "Today",
    "fieldname": "attendance_date",
    "fieldtype": "Date",
    "in_list_view": 1,
@@ -58,7 +59,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-03-04 10:22:09.883563",
+ "modified": "2024-03-05 11:42:09.958744",
  "modified_by": "Administrator",
  "module": "Trainee Management",
  "name": "Trainee Attendance",
