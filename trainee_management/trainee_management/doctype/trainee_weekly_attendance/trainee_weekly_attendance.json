@@ -1,0 +1,101 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-03-06 17:41:11.300123",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "section_break_fj9wu",
+  "from_date",
+  "column_break_9q3ti",
+  "to_date",
+  "section_break_co8jh",
+  "mark_attendance",
+  "amended_from",
+  "attendance_details"
+ ],
+ "fields": [
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "To Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "From Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Trainee Weekly Attendance",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_fj9wu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_9q3ti",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_co8jh",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "attendance_details",
+   "fieldtype": "Table",
+   "label": "Attendance Details ",
+   "options": "Weekdays for Trainee Attendance"
+  },
+  {
+   "fieldname": "mark_attendance",
+   "fieldtype": "Button",
+   "label": "Mark Attendance"
+  },
+  {
+   "fieldname": "name1",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Name",
+   "options": "Trainee",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-03-12 17:20:04.888471",
+ "modified_by": "Administrator",
+ "module": "Trainee Management",
+ "name": "Trainee Weekly Attendance",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

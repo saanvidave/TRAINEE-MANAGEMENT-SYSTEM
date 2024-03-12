@@ -7,20 +7,21 @@ from frappe import _
 
 
 class TraineeAttendance(Document):
-    pass
+
     def validate(self):
         if not self.is_new():
             return
 
+        
+        trainee_status = frappe.get_value("Trainee", self.trainee_name, "status")
+        if trainee_status != "Active":
+            frappe.throw(_("Trainee is not active. Cannot fill attendance."))
+
         existing_record = frappe.get_all("Trainee Attendance",
-        filters={'trainee_name': self.trainee_name, 
-                 'attendance_date': self.attendance_date,
-                 'name': ['!=', self.name]})
+            filters={'trainee_name': self.trainee_name, 
+                     'attendance_date': self.attendance_date,
+                     'name': ['!=', self.name]})
 
         if existing_record:
-            frappe.throw("Your Attendance Already Fillup")
+            frappe.throw(_("Your Attendance has already been recorded for this date."))
 
-  
-
-
-      

@@ -15,14 +15,14 @@ frappe.query_reports["Trainee Work Status Report"] = {
 			"label": __("From Date"),
            	"fieldname": "from_date",
             "fieldtype": "Date",
-			 "default": frappe.datetime.month_start()
+			"default": frappe.datetime.month_start()
            
 		},
 		{
 			"label": __("To Date"),
             "fieldname": "to_date",
             "fieldtype": "Date",
-			 "default": frappe.datetime.month_end()
+			"default": frappe.datetime.month_end()
            
 	           
 		}
