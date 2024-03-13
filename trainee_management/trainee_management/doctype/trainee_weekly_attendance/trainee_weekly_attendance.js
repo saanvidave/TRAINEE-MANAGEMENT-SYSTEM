@@ -19,8 +19,6 @@ frappe.ui.form.on('Trainee Weekly Attendance', {
 		})
         
     },
-    
-    
     onload: function(frm) {
         
         const today = new Date();

@@ -4,6 +4,8 @@
 import frappe
 from frappe.model.document import Document
 from frappe import _
+from frappe.utils import get_weekday, getdate
+
 
 class TraineeWeeklyAttendance(Document):
     @frappe.whitelist()
@@ -17,10 +19,13 @@ class TraineeWeeklyAttendance(Document):
             frappe.throw("Please select both 'From Date' and 'To Date'")
             
         self.set("attendance_details", [])
+        
+        
         details = []
         current_date = self.from_date
         while current_date <= self.to_date:
-            details.append({"attendance_date": current_date, "status": "Absent"})
+            day_name=get_weekday(getdate(current_date))
+            details.append({"attendance_date": current_date,"day":day_name, "status": "Absent"})
             current_date = frappe.utils.add_days(current_date, 1)
         self.set('attendance_details', details)
 
@@ -43,7 +48,6 @@ class TraineeWeeklyAttendance(Document):
 
         if existing_record:
             frappe.throw(_("Your Attendance has already been recorded for this week."))
-  
   
   
   

@@ -3,9 +3,12 @@
 var StartDate;
 var EndDate;
 var Duration;
+var joiningdate;
+var applicationdate;
 var Status_change;
 
 frappe.ui.form.on('Trainee', {
+    
     before_insert: function (frm) {
         frm.set_value("placement_officer_contact_no", "+91-");
     },
@@ -42,18 +45,31 @@ frappe.ui.form.on('Trainee', {
         frm.doc.college_name = capitalizecollegename
         frm.refresh_fields(); 
     },
+   
+ 
 	onload: function(frm) 
 	{
 		StartDate = frm.doc.starting_date;
         EndDate = frm.doc.ending_date;
-
+        applicationdate = frm.doc.application_date;
+        joiningdate = frm.doc.joining_date;
         updateFields(frm);
 
+    },
+    application_date: function(frm){
+        applicationdate = frm.doc.application_date;
+        pd(frm);
+      
     },
     starting_date: function(frm) {
 		StartDate = frm.doc.starting_date;
 
         updateFields(frm);
+    },
+    joining_date: function(frm){
+        joiningdate = frm.doc.joining_date;
+        pd(frm);
+        
     },
 
     ending_date: function(frm) {
@@ -95,14 +111,14 @@ function Status(frm) {
     frm.set_value("status", Status_change);
 }
 function Duration(frm){
-	   var todate = new Date(StartDate);
+	    var todate = new Date(StartDate);
         var enddate = new Date(EndDate);
         //for duration
-        var days = todate.getDate() - enddate.getDate();
+        var days = enddate.getDay() - todate.getDay();
         var months = enddate.getMonth() - todate.getMonth();
         
-        frm.set_value("duration", months + " Month "+", "+  days + " Days");
-
+        frm.set_value("duration", months + " Month "+"," + days + "days");
+    
 	
 }
 
@@ -114,9 +130,16 @@ function previousdate(frm) {
         updateFields(frm);
     }
 }
+function pd(frm){
+    if (joiningdate && applicationdate && joiningdate < applicationdate) {
+        frappe.msgprint(__("Joining Date can not be before Application Date."));
+        frm.set_value('joining_date', '');
+    } 
+}
 
 function updateFields(frm) {
     Duration(frm);
     Status(frm);
 	previousdate(frm);
+    
 }
