@@ -114,10 +114,13 @@ function Duration(frm){
 	    var todate = new Date(StartDate);
         var enddate = new Date(EndDate);
         //for duration
-        var days = enddate.getDay() - todate.getDay();
-        var months = enddate.getMonth() - todate.getMonth();
-        
-        frm.set_value("duration", months + " Month "+"," + days + "days");
+        // var days = enddate.getDay() - todate.getDay();
+        // var months = enddate.getMonth() - todate.getMonth();
+        var timeDifference = Math.abs(enddate - todate);
+        var days = Math.floor(timeDifference / (1000 * 3600 * 24));
+        var months = Math.floor(days / 30);
+        var remainingDays = days % 30;        
+        frm.set_value("duration", months + " Month "+"," + remainingDays + "days");
     
 	
 }
