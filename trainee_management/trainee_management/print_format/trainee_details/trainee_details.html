@@ -1,0 +1,262 @@
+          
+{%- from "templates/print_formats/standard_macros.html" import add_header,render_field -%}
+<div id="header-html" class="visible-pdf" >
+              {{ add_header(0,1,doc,letter_head) }}
+ </div>
+<div>
+<div id="footer-html" class="visible-pdf">
+ {% if not no_letterhead and footer %}
+ <div class="letter-head-footer">
+   {{ footer }}
+ </div>
+ {% endif %}
+ <p class="text-center small page-number visible-pdf">
+   {{ _("Page {0} of {1}").format('<span class="page"></span>', '<span class="topage"></span>') }}
+ </p>
+</div>
+<!-- {%- set letterhead_content = frappe.get_doc('Letter Head', 'college letter head').content -%}
+
+{%- if letterhead_content -%}
+<div class="letter-head">
+    {{ letterhead_content }}
+</div> -->
+{%- endif -%}
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- <title>{{ doc.name }}</title> -->
+  <style>
+    .main{
+      border: black solid 3px;
+    }
+    .header {
+      background-color:#fff; 
+      border-radius: 5px; 
+      border-bottom: black solid;
+    }
+  
+    .header img {
+      
+      width: 100px;
+      height: 100px;
+      border-radius: 50%; 
+      float: left;
+    }
+  
+    .header h1 {
+      position: relative;
+      
+      left: 90px;
+      color: #fff; 
+      align-items :center;
+    }
+    .header h2{
+      position: relative;
+      left:50px;
+    }
+    .header h4{
+      position: relative;
+      left:100px;
+    }
+    .section1{
+      border-bottom: black solid 2px;
+
+    }
+    .section1 table{
+      margin-left: 30px;
+
+    }
+    .section1 img{
+      width: 150px;
+      height: 150px;
+      float: right;
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+    .section1 h2{
+      text-align: left;
+
+      padding-left: 10px;
+  
+      }
+    
+    .section2{
+      border-bottom: black solid 2px;    }
+    .section2 h2{
+      text-align: left;
+      padding-left: 10px;
+
+    }
+    .section2 table{
+      margin-left: 30px;
+
+    }.section3{
+      border-bottom: black solid 2px;    }
+    .section3 h2{
+      text-align: left;
+      padding-left: 10px;
+    }.section3 table{
+      margin-left: 30px;
+
+    }.section4{
+        border-bottom: black solid 2px;    }
+      .section4 h2{
+        text-align: left;
+        padding-left: 10px;
+  
+      }.section4 table{
+        margin-left: 30px;
+  
+      }
+    .section3 img{
+      width: 450px;
+      height: 450px;
+  
+      margin-left: 100px;
+    }
+  </style>
+  <div class="main">
+<!-- <div class="header">
+  <img  src="Downloads\logo.png" alt="college Image"  width="50px ">
+
+  <h2>College Of Agricultural Information Technology</h2>
+  <h4>Anand Agricultural University,Anand</h4>
+
+  <h1>Student Registration Form</h1>
+
+</div> -->
+</head>
+<body border="1">
+  <div class="section1" >
+     <h2><b>Personal Details:</b></h2>
+<img src="{{ doc.image }}" alt="Student Image"  width="300px ">
+
+  <table  >
+    
+
+   <tr>
+        <th>Full Name :</th>
+      
+        <td>{{ doc.full_name }}</td>
+      </tr>
+        <tr>
+        <th>Date of Birth :</th>
+        <td>{{ frappe. utils. formatdate(doc.date_of_birth, "dd-MM-yyyy") }}</td>
+        
+        </td>
+       
+    </tr>
+    <tr>
+        <th>Contact :</th>
+      
+        <td>{{ doc.contact_no}}</td>
+      </tr>
+      <tr>
+        <th>Email :</th>
+      
+        <td>{{ doc.email_id }}</td>
+    </tr>
+     <tr>
+        <th>Gender :</th>
+      
+        <td>{{ doc.gender }}</td>
+      </tr>
+      <tr>
+      
+        <th>Category :</th>
+      
+        <td>{{ doc.category }}</td>
+    </tr>
+    <tr>
+        <th>Address :</th>
+      
+        <td>{{ doc.address }}</td>
+      
+        
+    </tr>
+    </table>
+  </div>
+ 
+  <div class="section2">
+    <h2><b>Course Details:</b></h2>
+    <table >
+   <tr>
+        <th>Current Course:</th>
+      
+        <td>{{ doc.current_course }}</td>
+      </tr>
+      <tr>
+        
+        <th>Semester:</th>
+      
+        <td>{{ doc.semester }}</td>
+    </tr><tr>
+      <th>Technical Skills:</th>
+      
+        <td>{{ doc.technical_skills }}</td></tr>
+        <tr>
+        <th> Enrollment  Number:</th>
+      
+        <td>{{ doc.enrollment__number }}</td>
+    </tr>
+    </tr>
+    </table>
+  </div>
+  <div class="section3"><h2><b>College Details:</b></h2>
+  <table>
+
+<tr>
+  <th>College Name:</th>
+  <td> {{ doc.college_name }}</td></tr>
+  
+<tr>
+    <th>  University Name:</th>
+    <td> {{ doc.university_name }}</td></tr>
+    
+
+    <th>Placement Officer's Name:</th>
+    <td> {{ doc.placement_officers_name }}</td></tr>
+    
+<tr>
+    <th>Placement Officer Contact No.:</th>
+    <td> {{ doc.placement_officer_contact_no }}</td></tr>
+    <tr>
+        <th>Placement Officer Email Id</th>
+        <td> {{ doc.placement_officer_email_id }}</td></tr>
+        
+    </table>
+</div>
+        <div class="section4"><h2><b>Training Details :</b></h2>
+            <table>
+          
+          <tr>
+            <th>Application Date:</th>
+            <td>{{ frappe. utils. formatdate(doc.application_date, "dd-MM-yyyy") }}</td></tr>
+            
+          <tr>
+              <th>  Starting Date:</th>
+              <td>{{ frappe. utils. formatdate(doc.starting_date, "dd-MM-yyyy") }}</td></tr>
+              
+          
+              <th>Joining Date:</th>
+              <td>{{ frappe. utils. formatdate(doc.joining_date, "dd-MM-yyyy") }}</td></tr>
+              
+          <tr>
+              <th>Ending Date:</th>
+              <td> {{ frappe. utils. formatdate(doc.ending_date, "dd-MM-yyyy") }}</td></tr>
+              <tr>
+                <th>Duration </th>
+                <td> {{ doc.duration }}</td></tr>
+</table>
+
+  </div>
+</div>
+</body>
+
+</html>
+
+
+
+
+
+
