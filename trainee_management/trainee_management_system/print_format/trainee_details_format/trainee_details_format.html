@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .maintext{
+            background-color:#ADD8E6; 
+            border-radius: 8px; 
+            border-bottom: black solid;
+            text-align:center;
+        }
+        .main{
+            border: black solid 4px;
+          }
+        .header img {
+            width: 80px;
+            height: 80px;
+            float: right;
+        }
+        .header h1 {
+            color: #fff;
+            margin: 0; 
+        }
+        .section1 {
+            width: 50%; 
+
+        }
+        .section1 img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px; 
+        }
+        .section2{
+            border-top: black solid 2px;
+            border-bottom: black solid 2px;    
+        }
+     
+    </style>
+</head>
+<body>
+    <h1 class="maintext">TRAINEE DETAILS</h1>
+
+    <div class="main">
+        <div class="header">
+            <h1>PERSONAL DETAILS</h1>
+            <img src="{{doc.image}}" alt="STUDENT'S IMAGE">
+        </div>
+        <div class="section1">
+            <table>
+                <tr>
+                    <th>FULL NAME:</th>
+                    <td>{{doc.full_name}}</td>
+                </tr>
+                <tr>
+                    <th>DOB:</th>
+                    <td>{{ frappe.utils.formatdate(doc.date_of_birth, "dd-mm-yyyy") }}</td>
+                    <th>AGE:</th>
+                    <td>{{doc.age}}</td>
+                </tr>
+                <tr>
+                    <th>EMAIL:</th>
+                    <td>{{doc.email_id}}</td>
+                    <th>CATEGORY:</th>
+                    <td>{{doc.category}}</td>
+                </tr>
+                <tr>
+                    <th>ADDRESS:</th>
+                    <td>{{doc.address}}</td>
+                </tr>
+                <tr>
+                    <th>COUNTRY:</th>
+                    <td>{{doc.country}}</td>
+                    <th>STATE:</th>
+                    <td>{{doc.state}}</td>
+                    <th>CITY:</th>
+                    <td>{{doc.city}}</td>
+                    <th>ZIP CODE:</th>
+                    <td>{{doc.zip_code}}</td>
+                </tr>
+                <tr>
+                    <th>CONTACT NUMBER:</th>
+                    <td>{{doc.contact_number}}</td>
+                    <th>GENDER:</th>
+                    <td>{{doc.gender}}</td>
+                </tr>
+            </table>
+        </div>
+        <div class="section2">
+            <h1>UNIVERSITY DETAILS</h1>
+            <table>
+                <tr>
+                    <th>UNIVERSITY NAME:</th>
+                    <td>{{doc.university_name}}</td>
+                </tr>
+                <tr>
+                    <th>COURSE:</th>
+                    <td>{{doc.current_course}}</td>
+                    <th>DEGREE PROGRAM:</th>
+                    <td>{{doc.degree_program}}</td>
+                    <th>ENROLLMENT NUMBER:</th>
+                    <td>{{doc.enrollment_number}}</td>
+                </tr>
+                <tr>
+                    <th>CURRENT SEMESTER:</th>
+                    <td>{{doc.current_semester}}</td>
+                    <th>ACADEMIC PERFORMANCE:</th>
+                    <td>{{doc.acedemic_performance}}</td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th>PREVIOUS INTERNSHIP DETAILS (if any):</th>
+                </tr>
+                <tr>
+                    <th>NAME OF THE COMPANY:</th>
+                    {% if doc.previous_internship_details %}
+                        {% for intern in doc.previous_internship_details %}
+                            <td>{{ intern.company_name }}</td>
+                        {% endfor %}
+                    {% else %}
+                        <td>NIL</td>
+                    {% endif %}
+                </tr>
+                <tr>
+                    <th>DURATION OF INTERNSHIP:</th>
+                    {% if doc.previous_internship_details %}
+                        {% for intern in doc.previous_internship_details %}
+                            <td>{{ intern.duration_of_internship }}</td>
+                        {% endfor %}
+                    {% else %}
+                        <td>NIL</td>
+                    {% endif %}
+                </tr>
+                <tr>
+                    <th>ROLE:</th>
+                    {% if doc.previous_internship_details %}
+                        {% for intern in doc.previous_internship_details %}
+                            <td>{{ intern.role }}</td>
+                        {% endfor %}
+                    {% else %}
+                        <td>NIL</td>
+                    {% endif %}
+                </tr>
+            </table>
+        </div>
+    
+    <div class="section2">
+        <h1>TRAINING DETAILS:</h1>
+        <table>
+            <tr>
+                <th>APPLICATION DATE:</th>
+                <td>{{doc.application_date}}</td>
+            </tr>
+            <tr>
+                <th>START DATE OF THE INTERNSHIP:</th>
+                <td>{{doc.start_date}}</td>
+                <th>END DATE OF THE INTERNSHIP:</th>
+                <td>{{doc.end_date}}</td>
+            </tr>
+            <tr>
+                <th>DURATION OF THE INTERNSHIP:</th>
+                <td>{{doc.duration}}</td>
+            </tr>
+        </table>
+        <div class="section2">
+            <h1>ATTACHMENTS</h1>
+            <table>
+                <tr>
+                    <th>RESUME:</th>
+                    <td><a href="{{ doc.resumefile }}">Click to View Resume</a></td>
+                </tr>
+                <tr>
+                    <th>LETTER OF RECOMMENDATION:</th>
+                    <td><a href="{{doc.letter_of_recomandation}}">Click to View Recommendation Letter</a></td>
+                </tr>
+                <tr>
+                    <th>CONFIRMATION LETTER</th>
+                    <td><a href="{{doc.confirmation_letter}}">Click to View Confirmation letter</a></td>
+                </tr>
+            </table>
+        </body>
+        <div>
+            <br>
+        <div style="float: left; padding: 10px">
+            <h5>_________________</h5>
+           <b><h5>Student Signature</h5></b>
+        </div>
+        <div style="float: right; padding:10px">
+            <h5>____________________________________</h5>
+            <b><h5>HEAD OF DEPARTMENT Signature</h5></b>
+        </div>
+    </div>
+    
+    </div>
+
+</html>

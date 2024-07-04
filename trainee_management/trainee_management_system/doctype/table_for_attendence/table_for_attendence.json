@@ -1,0 +1,48 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-06-20 11:16:27.799424",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "attendance_date",
+  "status",
+  "day"
+ ],
+ "fields": [
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "STATUS",
+   "options": "PRESENT\nABSENT\nFIRST HALF\nSECOND HALF\nHOLIDAY\nWORK FROM HOME\nWO",
+   "reqd": 1
+  },
+  {
+   "fieldname": "day",
+   "fieldtype": "Data",
+   "label": "DAY",
+   "reqd": 1
+  },
+  {
+   "fieldname": "attendance_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "ATTENDANCE DATE",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-06-26 11:27:12.606782",
+ "modified_by": "Administrator",
+ "module": "Trainee Management System",
+ "name": "TABLE FOR ATTENDENCE",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

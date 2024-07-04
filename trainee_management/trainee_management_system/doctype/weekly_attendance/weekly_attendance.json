@@ -1,0 +1,107 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{from_date}-to-{to_date}-{###}",
+ "creation": "2024-06-20 15:56:23.958654",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "trainee_name",
+  "section_break_hlqjg",
+  "from_date",
+  "column_break_dnuyq",
+  "to_date",
+  "section_break_k1zu1",
+  "mark_the_attendance",
+  "section_break_k82zm",
+  "attendance_details",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "trainee_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "NAME",
+   "options": "TRAINEE DETAILS",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_hlqjg",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "FROM DATE ",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_dnuyq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "TO DATE ",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_k1zu1",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "mark_the_attendance",
+   "fieldtype": "Button",
+   "label": "MARK ATTENDANCE"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "WEEKLY ATTENDANCE",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_k82zm",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "attendance_details",
+   "fieldtype": "Table",
+   "label": "ATTENDANCE DETAILS",
+   "options": "TABLE FOR ATTENDENCE"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-06-26 11:38:47.949390",
+ "modified_by": "Administrator",
+ "module": "Trainee Management System",
+ "name": "WEEKLY ATTENDANCE",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

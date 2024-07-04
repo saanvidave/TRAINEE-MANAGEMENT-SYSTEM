@@ -1,0 +1,56 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+
+<canvas id="myChart" width="400" height="400"></canvas>
+
+<script>
+frappe.call({
+    method: 'frappe.desk.query_report.run',
+    args: {
+        report_name: 'WORK DONE REPORT',
+        filters: {}
+    },
+    callback: function(r) {
+        var data = r.message.result;  // Fetches the result data from the Query Report
+        var chartData = data.chart;   // Extracts chart data from the result
+
+        // Get the canvas element by its ID and get the 2D rendering context
+        var ctx = document.getElementById('myChart').getContext('2d');
+
+        // Create a new Chart instance based on the retrieved context
+        var myChart = new Chart(ctx, {
+            type: chartData.datasets[0].chartType,  // Specifies the chart type (e.g., 'pie', 'bar', etc.)
+            data: {
+                labels: chartData.labels,  // Provides the labels (x-axis values) for the chart
+                datasets: [{
+                    label: chartData.datasets[0].name,  // Specifies the dataset label
+                    data: chartData.datasets[0].values,  // Provides the dataset values (y-axis values)
+                    backgroundColor: [  // Specifies background colors for dataset bars/pie slices
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [  // Specifies border colors for dataset bars/pie slices
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1  // Specifies the border width for dataset elements
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true  // Starts the y-axis scale from zero
+                    }
+                }
+            }
+        });
+    }
+});
+</script>

@@ -1,0 +1,368 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:full_name",
+ "creation": "2024-06-18 11:45:07.400240",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "personal_details",
+  "full_name",
+  "first_name",
+  "middle_name",
+  "column_break_lj9nf",
+  "image",
+  "last_name",
+  "section_break_81szq",
+  "date_of_birth",
+  "contact_number",
+  "address",
+  "column_break_p9myl",
+  "age",
+  "gender",
+  "country",
+  "state",
+  "city",
+  "zip_code",
+  "section_break_kkhld",
+  "category",
+  "column_break_fp1cj",
+  "email_id",
+  "universitycollege_details_tab",
+  "university_name",
+  "degree_program",
+  "current_semester",
+  "previous_internship",
+  "column_break_bm7on",
+  "enrollment_number",
+  "current_course",
+  "acedemic_performance",
+  "training_details",
+  "application_date",
+  "section_break_cm2ke",
+  "start_date",
+  "duration",
+  "column_break_pcudx",
+  "end_date",
+  "status",
+  "attachments_tab",
+  "resumefile",
+  "section_break_ehhxi",
+  "letter_of_recomandation",
+  "report",
+  "column_break_xi29d",
+  "confirmation_letter",
+  "completion_letter",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "personal_details",
+   "fieldtype": "Tab Break",
+   "label": "PERSONAL DETAILS"
+  },
+  {
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "FULL NAME",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "first_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "FIRST NAME",
+   "reqd": 1
+  },
+  {
+   "fieldname": "middle_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "MIDDLE NAME",
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "LAST NAME",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_of_birth",
+   "fieldtype": "Date",
+   "label": "DATE OF BIRTH",
+   "reqd": 1
+  },
+  {
+   "fieldname": "age",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "AGE"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "label": "GENDER",
+   "options": "MALE\nFEMALE\nOTHER",
+   "reqd": 1
+  },
+  {
+   "default": "+91-",
+   "fieldname": "contact_number",
+   "fieldtype": "Phone",
+   "label": "CONTACT NUMBER",
+   "reqd": 1
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Text",
+   "label": "ADDRESS",
+   "reqd": 1
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "CITY",
+   "reqd": 1
+  },
+  {
+   "fieldname": "state",
+   "fieldtype": "Data",
+   "label": "STATE",
+   "reqd": 1
+  },
+  {
+   "fieldname": "country",
+   "fieldtype": "Data",
+   "label": "COUNTRY",
+   "reqd": 1
+  },
+  {
+   "fieldname": "zip_code",
+   "fieldtype": "Int",
+   "label": "ZIP-CODE",
+   "reqd": 1
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach",
+   "label": "IMAGE",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_lj9nf",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_81szq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_p9myl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_kkhld",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "label": "CATEGORY",
+   "options": "GENERAL\nOBC\nSC/ST\nOTHER",
+   "reqd": 1
+  },
+  {
+   "fieldname": "universitycollege_details_tab",
+   "fieldtype": "Tab Break",
+   "label": "UNIVERSITY/COLLEGE DETAILS"
+  },
+  {
+   "fieldname": "university_name",
+   "fieldtype": "Data",
+   "label": "UNIVERSITY / COLLEGE NAME",
+   "reqd": 1
+  },
+  {
+   "fieldname": "current_course",
+   "fieldtype": "Select",
+   "label": "CURRENT COURSE",
+   "options": "B.Tech\nB.E\nBCA\nB.Sc\nM.Tech\nM.E\nMCA\nM.Sc",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_bm7on",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "(Eg: Computer, Electrical,etc)",
+   "fieldname": "degree_program",
+   "fieldtype": "Data",
+   "label": "DEGREE PROGRAM",
+   "reqd": 1
+  },
+  {
+   "fieldname": "current_semester",
+   "fieldtype": "Int",
+   "label": "CURRENT SEMESTER",
+   "reqd": 1
+  },
+  {
+   "description": "(CGPA/GPA/Percentage)",
+   "fieldname": "acedemic_performance",
+   "fieldtype": "Float",
+   "label": "ACEDEMIC PERFORMANCE",
+   "reqd": 1
+  },
+  {
+   "description": "(IF ANY)",
+   "fieldname": "previous_internship",
+   "fieldtype": "Table",
+   "label": "PREVIOUS INTERNSHIP DETAILS",
+   "options": "PREVIOUS INTERNSHIP DETAILS"
+  },
+  {
+   "fieldname": "training_details",
+   "fieldtype": "Tab Break",
+   "label": "TRAINING DETAILS"
+  },
+  {
+   "fieldname": "application_date",
+   "fieldtype": "Date",
+   "label": "APPLICATION DATE",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_cm2ke",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "START / JOINING DATE",
+   "reqd": 1
+  },
+  {
+   "fieldname": "duration",
+   "fieldtype": "Data",
+   "label": "DURATION"
+  },
+  {
+   "fieldname": "column_break_pcudx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "END DATE",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "STATUS",
+   "options": "ACTIVE\nCOMPLETED\nNOT STARTED",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "TRAINEE DETAILS",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_fp1cj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "enrollment_number",
+   "fieldtype": "Data",
+   "label": "ENROLLMENT NUMBER ",
+   "reqd": 1
+  },
+  {
+   "fieldname": "attachments_tab",
+   "fieldtype": "Tab Break",
+   "label": "ATTACHMENTS "
+  },
+  {
+   "fieldname": "letter_of_recomandation",
+   "fieldtype": "Attach",
+   "label": "LETTER OF RECOMMENDATION",
+   "reqd": 1
+  },
+  {
+   "fieldname": "completion_letter",
+   "fieldtype": "Attach",
+   "label": "COMPLETION LETTER "
+  },
+  {
+   "description": "(Report of the project done during the internship)",
+   "fieldname": "report",
+   "fieldtype": "Attach",
+   "label": "REPORT"
+  },
+  {
+   "fieldname": "column_break_xi29d",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "resumefile",
+   "fieldtype": "Attach",
+   "label": "RESUME ",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_ehhxi",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "email_id",
+   "fieldtype": "Data",
+   "label": "EMAIL ID",
+   "options": "EMAIL",
+   "reqd": 1
+  },
+  {
+   "fieldname": "confirmation_letter",
+   "fieldtype": "Attach",
+   "label": "CONFIRMATION LETTER ",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-06-28 16:03:08.391251",
+ "modified_by": "Administrator",
+ "module": "Trainee Management System",
+ "name": "TRAINEE DETAILS",
+ "name_case": "Title Case",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
